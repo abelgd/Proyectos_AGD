@@ -1,0 +1,121 @@
+# ============================
+# Información básica del reto
+# ============================
+
+name: Diario del atacante
+author: Abel García Domínguez
+category: forensic
+
+description: |
+  Durante una investigación de incidente en la empresa **CORP-ES S.L.**, el equipo de respuesta confiscó el equipo portátil de un empleado sospechoso de exfiltrar información corporativa confidencial. El análisis de red revela actividad sospechosa desde su equipo durante la **madrugada del 18 de marzo de 2024**. Se recuperó el historial del navegador Chrome del sistema comprometido. Tu misión: analiza el historial y encuentra qué información intentó exfiltrar el atacante.
+
+value: 100
+
+# Tipo de reto.
+# NO modificar este valor.
+type: standard
+
+
+# ============================
+# Infraestructura / despliegue
+# ============================
+
+# Si el reto no usa Docker, deja estos valores en null.
+image: null
+protocol: null
+host: null
+
+# Si necesitas subir archivos para el despliegue, crea el directorio docker-deployment/ y súbelos ahí.
+
+# ============================
+# Información de conexión
+# ============================
+
+# Este apartado se utilizaría si el reto expone un servicio
+# (por ejemplo un servidor web o un puerto TCP).
+# De momento no es necesario para los retos del curso.
+
+# connection_info: nc ejemplo.com 12345
+
+
+# ============================
+# Solución del reto
+# ============================
+
+# Todos los retos deben incluir un writeup con la solución.
+solution: writeup/WRITEUP.md
+
+## Si el writeup necesita imágenes, crea la carpeta /img y guárdalas en esa carpeta.
+
+
+# ============================
+# Flags del reto
+# ============================
+
+# Las flags deben ser:
+# - estáticas
+# - case insensitive
+
+flags:
+  - type: static
+    content: flag{ch4rm_h1st0ry_n3v3r_l135}
+    data: case_insensitive
+
+
+# ============================
+# Archivos del reto
+# ============================
+
+# Archivos que podrán descargar los jugadores.
+files:
+  - dist/History.txt
+
+
+
+# ============================
+# Pistas (opcional)
+# ============================
+
+# Las pistas ayudan a los jugadores si se quedan atascados.
+# Si una pista tiene "cost", al usarla pierde puntos.
+
+hints:
+  - content: Revisa con calma cada página que visitó el sospechoso. No todas tienen títulos normales.
+    cost: 15
+
+# Si el reto no lleva pistas, comenta lo anterior.
+
+
+# ============================
+# Dependencias entre retos
+# ============================
+
+# Permite que este reto solo se desbloquee cuando se haya resuelto otro.
+# IMPORTANTE: aquí se usa el valor del campo "name" del otro reto,
+# no el nombre de la carpeta.
+#
+# Si no hay dependencias, se deja la lista vacía:
+# requirements: []
+#
+# Ejemplo con dependencias:
+# requirements:
+#   - Warmup
+#   - Intro Crypto
+
+requirements: []
+
+
+
+# ============================
+# Estado del reto
+# ============================
+
+# Los retos se crean ocultos por defecto.
+state: hidden
+
+
+# ============================
+# Versión de la especificación
+# ============================
+
+version: "0.1"

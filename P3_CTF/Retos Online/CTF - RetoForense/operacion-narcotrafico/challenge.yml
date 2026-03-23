@@ -1,0 +1,123 @@
+# ============================
+# Información básica del reto
+# ============================
+
+name: Operación contra el narcotráfico
+author: Abel García Domínguez
+category: Forensic
+
+description: |
+  Durante el registro del dispositivo móvil de un delincuente, los investigadores localizaron un archivo sospechoso llamado piso-narco.html. A simple vista parece un archivo HTML sin utilidad, pero, por el contexto del caso, se cree que en realidad contiene información relevante para la investigación. Tu tarea como analista forense es examinar el archivo entregado, determinar su verdadera naturaleza y recuperar la evidencia oculta. Se sospecha que el archivo ha sido modificado o renombrado para dificultar su identificación.
+value: 10
+
+# Tipo de reto.
+# NO modificar este valor.
+type: standard
+
+
+# ============================
+# Infraestructura / despliegue
+# ============================
+
+# Si el reto no usa Docker, deja estos valores en null.
+image: null
+protocol: null
+host: null
+
+
+# ============================
+# Información de conexión
+# ============================
+
+# Este apartado se utilizaría si el reto expone un servicio
+# (por ejemplo un servidor web o un puerto TCP).
+# De momento no es necesario para los retos del curso.
+
+# connection_info: nc ejemplo.com 12345
+
+
+# ============================
+# Solución del reto
+# ============================
+
+# Todos los retos deben incluir un writeup con la solución.
+solution: writeup/WRITEUP.md
+
+
+# ============================
+# Flags del reto
+# ============================
+
+# Las flags deben ser:
+# - estáticas
+# - case insensitive
+
+flags:
+  - type: static
+    content: flag{H1D3_D4RK_SH4D0WS}
+    data: case_insensitive
+
+
+# ============================
+# Archivos del reto
+# ============================
+
+# Archivos que podrán descargar los jugadores.
+files:
+  - dist/piso-narco.html
+
+
+# ============================
+# Tags
+# ============================
+
+tags:
+  - example
+
+
+# ============================
+# Pistas (opcional)
+# ============================
+
+# Las pistas ayudan a los jugadores si se quedan atascados.
+# Si una pista tiene "cost", al usarla pierde puntos.
+
+# hints:
+#  - content: Mira con atención el archivo proporcionado
+
+#  - content: La flag está dentro del archivo
+#    cost: 10
+
+
+# ============================
+# Dependencias entre retos
+# ============================
+
+# Permite que este reto solo se desbloquee cuando se haya resuelto otro.
+# IMPORTANTE: aquí se usa el valor del campo "name" del otro reto,
+# no el nombre de la carpeta.
+#
+# Si no hay dependencias, se deja la lista vacía:
+# requirements: []
+#
+# Ejemplo con dependencias:
+# requirements:
+#   - Warmup
+#   - Intro Crypto
+
+requirements: []
+
+
+# ============================
+# Estado del reto
+# ============================
+
+# Los retos se crean ocultos por defecto.
+state: hidden
+
+
+# ============================
+# Versión de la especificación
+# ============================
+
+version: "0.1"
