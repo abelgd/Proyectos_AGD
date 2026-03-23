@@ -18,5 +18,9 @@ especializado.
 
 ## Archivos
 
-- `README.md` — Este documento
-- `E-01.png` — Material fotográfico adjunto al expediente
+- `README.md` — Este documento  
+- `E-01.png` — Material fotográfico adjunto al expediente  
+
+---
+
+**Nota adicional:** El criminal puede haber escondido algún mensaje encriptado de alguna forma en la imagen o el documento que se presenta.
